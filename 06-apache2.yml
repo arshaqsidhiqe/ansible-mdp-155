@@ -1,5 +1,5 @@
 ---
-- name: Setup an HTTPD n1 server
+- name: Setup an apache2 on n2 server
   hosts: n2
   become: yes
 
