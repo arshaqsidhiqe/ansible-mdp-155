@@ -5,8 +5,8 @@
 
 
   tasks:
-   - name: updating the local package index to reflect the latest upstream changes
-     apt: 
+  - name: updating the local package index to reflect the latest upstream changes
+    apt: 
       name: update
       update_cache: yes
       state: latest
