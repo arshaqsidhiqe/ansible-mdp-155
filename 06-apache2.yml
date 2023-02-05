@@ -2,18 +2,8 @@
 - name: Setup an apache2 on n2 Ubuntu server
   hosts: n2
   become: yes
-
-
-  tasks:
-  - name: updating the local package index to reflect the latest upstream changes
-    apt: 
-      name: update
-      update_cache: yes
-      state: latest
-
-   
   
-  
+  tasks: 
   - name: Install apache2
     apt: 
       name: apache2
