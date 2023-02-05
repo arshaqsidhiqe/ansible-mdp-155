@@ -1,6 +1,9 @@
 ---
 - name: Setup an HTTPD n1 server
   hosts: n1
+  become: yes
+
+
   tasks:
   - name: Install HTTPD
     yum: 
