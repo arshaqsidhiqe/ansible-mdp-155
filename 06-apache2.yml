@@ -5,6 +5,12 @@
 
 
   tasks:
+  - name: updating the local package index to reflect the latest upstream changes
+    apt: 
+      name: update
+      state: present
+  
+  
   - name: Install apache2
     apt: 
       name: apache2
@@ -20,3 +26,5 @@
       name: apache2
       enabled: true
 ...
+
+
