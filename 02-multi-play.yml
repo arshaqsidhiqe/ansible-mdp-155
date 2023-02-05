@@ -1,0 +1,35 @@
+# Ad Hoc Command for Directory
+# ansible n1 -m file -a "path=/home/centos/n1_dir state=directory"
+
+
+---
+- name: Update n1 server
+  hosts: n1
+
+  tasks:
+  - name: Ensure Directory created
+    file:
+      path: /home/centos/n1_dir
+      state: directory
+
+- name: Update g1 server
+  hosts: g1
+
+  tasks:
+  - name: Ensure Directory created
+    file:
+      path: /home/centos/g1_dir
+      state: directory
+
+- name: Update all server
+  hosts: all
+
+  tasks:
+  - name: Ensure Directory created
+    file:
+      path: /home/centos/common_dir
+      state: directory
+...
+
+
+
