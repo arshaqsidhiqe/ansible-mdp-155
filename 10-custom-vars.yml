@@ -1,0 +1,14 @@
+---
+- name: Deploy Info App on n1 server
+  hosts: all
+  become: yes
+  vars:
+    user_name: Arsh
+
+  tasks:
+  - name: Copy Dynamic page
+    copy:
+      src: info.j2
+      dest: /var/www/html/dynamic.html
+
+...
