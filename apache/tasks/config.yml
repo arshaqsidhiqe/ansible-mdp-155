@@ -1,0 +1,21 @@
+---
+- name: Copy page
+    copy:
+      src: info.html
+      dest: /var/www/html/info.html
+
+- name: Copy Dynamic page
+    copy:
+      src: info.j2
+      dest: /var/www/html/dynamic.html
+
+- name: Copy Dynamic Config
+    copy:
+      src: httpd.j2
+      dest: /etc/httpd/conf/httpd.conf
+
+- name: Rstart HTTPD
+    service:
+      name: httpd
+      state: restarted
+...
