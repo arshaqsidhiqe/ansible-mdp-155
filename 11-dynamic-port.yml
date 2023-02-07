@@ -1,0 +1,14 @@
+---
+- name: Modify Ports on Web Server
+  hosts: n3
+  become: yes
+  vars:
+    custom_port: 9090
+
+  tasks:
+  - name: Copy Dynamic Config
+    copy:
+      src: httpd.j2
+      dest: /etc/httpd/conf/httpd.conf
+
+...
