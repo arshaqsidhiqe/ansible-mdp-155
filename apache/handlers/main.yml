@@ -1,2 +1,7 @@
 ---
 # handlers file for apache
+- name: Rstart HTTPD
+    service:
+      name: httpd
+      state: restarted
+...
