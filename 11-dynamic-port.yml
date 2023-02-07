@@ -11,4 +11,9 @@
       src: httpd.j2
       dest: /etc/httpd/conf/httpd.conf
 
+  - name: Rstart HTTPD
+    service:
+      name: httpd
+      state: restarted
+
 ...
